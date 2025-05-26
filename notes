@@ -1,0 +1,4 @@
+//Criar tabelas no banco de dados configurado
+
+npx drizzle-kit push
+npx drizzle-kit studio  -> abrir o banco
