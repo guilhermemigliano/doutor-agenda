@@ -108,7 +108,7 @@ const UpsertPatientForm = ({
               <FormItem>
                 <FormLabel>Nome</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input placeholder="Digite o nome completo" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -121,7 +121,7 @@ const UpsertPatientForm = ({
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input type="email" {...field} />
+                  <Input type="email" placeholder="Digite o email" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -142,6 +142,7 @@ const UpsertPatientForm = ({
                     onValueChange={(values) => {
                       field.onChange(values.value);
                     }}
+                    placeholder="Digite o número de telefone"
                   />
                 </FormControl>
                 <FormMessage />
@@ -159,8 +160,8 @@ const UpsertPatientForm = ({
                   defaultValue={field.value}
                 >
                   <FormControl>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Selecione o sexo" />
+                    <SelectTrigger className="w-full">
+                      <SelectValue placeholder="Selecione o sexo do paciente" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
