@@ -2,3 +2,6 @@
 
 npx drizzle-kit push
 npx drizzle-kit studio  -> abrir o banco
+
+//iniciar webhook
+stripe listen --forward-to localhost:3000/api/stripe/webhook
