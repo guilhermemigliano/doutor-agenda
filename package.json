@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seed:doctors": "tsx src/scripts/seed-doctors.ts",
+    "seed:patients": "tsx src/scripts/seed-patients.ts",
+    "seed:appointments": "tsx src/scripts/seed-appointments.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
@@ -52,6 +55,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@faker-js/faker": "^9.8.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^22",
     "@types/react": "^19",
@@ -62,6 +66,7 @@
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4",
+    "tsx": "^4.19.4",
     "tw-animate-css": "^1.3.2",
     "typescript": "^5"
   }
