@@ -1,5 +1,4 @@
 import { headers } from "next/headers";
-//import Image from "next/image";
 import { redirect } from "next/navigation";
 
 import {
@@ -26,11 +25,12 @@ const DashboardPage = async () => {
   if (!session.user.clinic) {
     redirect("/clinic-form");
   }
+
   return (
     <PageContainer>
       <PageHeader>
         <PageHeaderContent>
-          <PageTitle>Pacientes</PageTitle>
+          <PageTitle>Dashboard</PageTitle>
           <PageDescription>
             Gerencie os pacientes da sua clínica
           </PageDescription>
