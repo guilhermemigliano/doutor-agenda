@@ -6,6 +6,7 @@ import {
   LayoutDashboard,
   LogOut,
   Stethoscope,
+  User2,
   UsersRound,
 } from "lucide-react";
 import Image from "next/image";
@@ -124,7 +125,9 @@ export function AppSidebar() {
               <DropdownMenuTrigger asChild>
                 <SidebarMenuButton size="lg">
                   <Avatar>
-                    <AvatarFallback>F</AvatarFallback>
+                    <AvatarFallback>
+                      <User2 className="size-6" />
+                    </AvatarFallback>
                   </Avatar>
                   <div>
                     <p className="text-sm">
