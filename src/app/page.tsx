@@ -41,7 +41,7 @@ export default function HomePage() {
   return (
     <div className="flex h-screen w-screen flex-row items-center justify-center">
       {/* Logo */}
-      <div className="flex h-screen flex-2 flex-col items-start justify-start bg-sky-500">
+      <div className="flex h-screen flex-3 flex-col items-start justify-start bg-sky-500 px-4">
         <div className="flex flex-1 items-start justify-center p-8">
           <Image
             src="/logo_cplus_white.png"
@@ -68,7 +68,7 @@ export default function HomePage() {
         </div>
       </div>
       {/* Login */}
-      <div className="flex flex-1 items-center justify-center">
+      <div className="flex flex-2 items-center justify-center px-4">
         <LoginForm />
       </div>
     </div>
