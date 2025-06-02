@@ -72,9 +72,9 @@ Este projeto foi desenvolvido durante o bootcamp pago da **FullStackClub** com o
 | `npm run build`             | Gera a versão de produção                  |
 | `npm run start`             | Inicia a aplicação em produção             |
 | `npm run lint`              | Executa o linter                           |
-| `npm run seed:doctors`      | Popula o banco com médicos fake            |
-| `npm run seed:patients`     | Popula o banco com pacientes fake          |
-| `npm run seed:appointments` | Popula o banco com agendamentos fake       |
+| `npm run seed:doctors`      | Popula o banco com médicos fictícios       |
+| `npm run seed:patients`     | Popula o banco com pacientes fictícios     |
+| `npm run seed:appointments` | Popula o banco com agendamentos fictícios  |
 
 ## ⚙️ Estrutura de Diretórios
 
