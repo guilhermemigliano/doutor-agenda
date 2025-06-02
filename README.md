@@ -1,10 +1,10 @@
 # Doutor Agenda 🩺
 
-![Dashboard da Clínica+](https://github.com/guilhermemigliano/doutor-agenda/tree/main/public/interface/dashboard.png)
+![Dashboard da Clínica+](https://github.com/guilhermemigliano/doutor-agenda/blob/main/public/inteface/dashboard.png?raw=true)
 
 Sistema moderno de agendamento de consultas médicas com painel administrativo e gerenciamento de pacientes e médicos. Desenvolvido com tecnologias modernas para uma experiência eficiente e segura.
 
-Este projeto foi desenvolvido durante o bootcamp pago da **FullStackClub**
+Este projeto foi desenvolvido durante o bootcamp pago da **FullStackClub** com o nome de Doutor Agenda e alterado para Clínica+ como modificação pessoal.
 
 ## ✨ Funcionalidades Principais
 
