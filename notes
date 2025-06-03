@@ -6,6 +6,9 @@ npx drizzle-kit studio  -> abrir o banco
 //iniciar webhook
 stripe listen --forward-to localhost:3000/api/stripe/webhook
 
+//build na vercel => npm install --legacy-peer-deps
+//alterar envs com localhost:300 para o link criado pelo vercel
+
 //gerar médicos
 npm run seed:doctors
 
