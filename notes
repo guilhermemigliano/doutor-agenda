@@ -17,3 +17,7 @@ npm run seed:patients
 
 //gerar agendamentos
 npm run seed:appointments
+
+Site Stripe => pesquisar webhooks =>  criar um destino de evento => selecionar os eventos (customer.subscription.deleted e invoice.paid
+
+npx eslint —fix src => corrigir os avisos de eslint
