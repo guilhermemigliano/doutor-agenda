@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import z from "zod";
@@ -40,6 +41,30 @@ const loginSchema = z.object({
 });
 
 const LoginForm = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  async function handleDemo() {
+    try {
+      setIsLoading(true);
+      await authClient.signIn.email(
+        {
+          email: "usuario@usuario.com.br",
+          password: "usuario12345",
+        },
+        {
+          onSuccess: () => {
+            router.push("/dashboard");
+          },
+          onError: () => {
+            toast.error("E-mail ou senha inválidos.");
+          },
+        },
+      );
+    } catch {
+      toast.error("E-mail ou senha inválidos.");
+    } finally {
+      setIsLoading(false);
+    }
+  }
   const router = useRouter();
   const form = useForm<z.infer<typeof loginSchema>>({
     resolver: zodResolver(loginSchema),
@@ -120,12 +145,22 @@ const LoginForm = () => {
               <Button
                 type="submit"
                 className="w-full"
-                disabled={form.formState.isSubmitting}
+                disabled={form.formState.isSubmitting || isLoading}
               >
                 {form.formState.isSubmitting && (
                   <Loader2 className="mr-0 h-4 w-4 animate-spin" />
                 )}
                 Entrar
+              </Button>
+              <Button
+                type="button"
+                variant={"dark"}
+                className="w-full"
+                disabled={form.formState.isSubmitting || isLoading}
+                onClick={handleDemo}
+              >
+                {isLoading && <Loader2 className="mr-0 h-4 w-4 animate-spin" />}
+                Versão de demonstração
               </Button>
               <Button
                 variant="outline"
