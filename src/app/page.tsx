@@ -7,9 +7,11 @@ import { useState } from "react";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { authClient } from "@/lib/auth-client";
 
 import LoginForm from "./authentication/components/login-form";
+import SignUpForm from "./authentication/components/sign-up-form";
 
 export default function HomePage() {
   const router = useRouter();
@@ -69,7 +71,18 @@ export default function HomePage() {
       </div>
       {/* Login */}
       <div className="flex flex-2 items-center justify-center px-4">
-        <LoginForm />
+        <Tabs defaultValue="login" className="w-[400px]">
+          <TabsList className="grid w-full grid-cols-2">
+            <TabsTrigger value="login">Login</TabsTrigger>
+            <TabsTrigger value="register">Criar conta</TabsTrigger>
+          </TabsList>
+          <TabsContent value="login">
+            <LoginForm />
+          </TabsContent>
+          <TabsContent value="register">
+            <SignUpForm />
+          </TabsContent>
+        </Tabs>
       </div>
     </div>
   );
